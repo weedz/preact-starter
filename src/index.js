@@ -1,16 +1,8 @@
 import {h, render} from 'preact';
-import "./style.css";
+import App from './App';
 
 if (process.env.NODE_ENV === "development") {
-    require("preact/debug");
-}
-
-const App = () => {
-    return (
-        <div>
-            <p>Preact starter</p>
-        </div>
-    );
+    import("preact/debug");
 }
 
 render(<App />, document.body);
