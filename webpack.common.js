@@ -5,13 +5,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: {
-        app: path.resolve('src/index.js'),
+        app: path.resolve('src/index.tsx'),
     },
     output: {
         path: path.resolve('dist'),
         publicPath: '/',
         filename: '[name].bundle.js',
         chunkFilename: '[name].[contentHash:8].js'
+    },
+    resolve: {
+        // Add `.ts` and `.tsx` as a resolvable extension.
+        extensions: [".ts", ".tsx", ".js"]
     },
     module: {
         rules: [
@@ -23,13 +27,27 @@ module.exports = {
                 }
             },
             {
+                test: /\.tsx?$/,
+                exclude: /(node_modules|\.webpack)/,
+                use: [
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
+                    'css-modules-typescript-loader',
                     {
                         loader: 'css-loader',
                         options: { modules: true, importLoaders: 1 }
-                    }
+                    },
+                    
                 ]
             },
             {

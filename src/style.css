@@ -7,3 +7,7 @@ body {
 .paragraph {
     color: red;
 }
+
+.active {
+    color: lightcoral;
+}
