@@ -1,14 +1,12 @@
-import { connectLanguage, localize } from "preact-i18n-weedz";
+import { connectLanguage } from "preact-i18n-weedz";
+import { ComponentConstructor, AnyComponent } from "preact";
 
-const locale = localize({
-    en: () => [{
-        greeting: "Hello world!"
-    }]
-});
-// export default (Child: VNode<typeof locale>|h.JSX.Element) => connectLanguage(Child, locale);
-// export default (Child: h.JSX.Element) => connectLanguage(Child, locale);
+const locales = {
+    en: () => [import("./en")]
+};
 
+export type StringValues = typeof import("./en").default;
 
-export default function(Child: any) {
-    return connectLanguage(Child, locale)
-}
+const wrapper = connectLanguage(locales);
+
+export default <T = {}>(Child: ComponentConstructor<T> | AnyComponent<T>) => wrapper(Child);
