@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@weedzcokie/i18n-preact": "^0.1.0",
     "preact": "^10.4.1",
-    "preact-i18n-weedz": "git+https://github.com/weedz/preact-i18n.git",
     "preact-router": "^3.2.1"
   },
   "devDependencies": {

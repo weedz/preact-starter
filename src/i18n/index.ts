@@ -1,4 +1,4 @@
-import { connectLanguage } from "preact-i18n-weedz";
+import { connectLanguage } from "@weedzcokie/i18n-preact";
 import { ComponentConstructor, AnyComponent } from "preact";
 
 const locales = {
