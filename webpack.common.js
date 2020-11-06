@@ -11,7 +11,7 @@ module.exports = {
         path: path.resolve('dist'),
         publicPath: '/',
         filename: '[name].bundle.js',
-        chunkFilename: '[name].[contentHash:8].js'
+        chunkFilename: '[name].[contenthash:8].js'
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
