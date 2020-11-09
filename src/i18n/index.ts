@@ -1,12 +1,10 @@
-import { connectLanguage } from "@weedzcokie/i18n-preact";
-import { ComponentConstructor, AnyComponent } from "preact";
+import { Wrapper } from "@weedzcokie/i18n-preact";
 
 const locales = {
-    en: () => [import("./en")]
+    en: () => [import("./en")],
+    sv: () => [import("./sv")]
 };
 
 export type StringValues = typeof import("./en").default;
 
-const wrapper = connectLanguage(locales);
-
-export default <T = {}>(Child: ComponentConstructor<T> | AnyComponent<T>) => wrapper(Child);
+export default Wrapper<StringValues>(locales);

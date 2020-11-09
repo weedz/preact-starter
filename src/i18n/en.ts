@@ -1,3 +1,3 @@
 export default {
-    greeting: "Hello world!"
+    greeting: (name: string) => `Hello, ${name}!`,
 }

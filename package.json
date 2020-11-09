@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@weedzcokie/i18n-preact": "^0.1.0",
+    "@weedzcokie/i18n-preact": "^1.0.0",
     "preact": "^10.5.5",
     "preact-router": "^3.2.1"
   },

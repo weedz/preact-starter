@@ -1,16 +1,17 @@
 import {h} from "preact";
 import { RoutableProps } from "preact-router";
 import Language, { StringValues } from "../i18n";
-import { StringProps } from "@weedzcokie/i18n-preact";
+import { LanguageProps } from "@weedzcokie/i18n-preact";
 
-type Props = RoutableProps & StringProps<StringValues>;
+type Props = RoutableProps & LanguageProps<StringValues>;
 
 function Main(props: Props) {
     return (
         <div>
-            <h1>Main, {props.string?.["greeting"]}</h1>
+            <h1>Main</h1>
+            <p>{props.string["greeting"]("Test")}</p>
         </div>
     );
 }
 
-export default Language(Main);
+export default Language<RoutableProps>(Main);
