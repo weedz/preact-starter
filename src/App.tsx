@@ -22,7 +22,7 @@ const App = (props: Props) => {
                 <option value="en">en</option>
                 <option value="sv">sv</option>
             </select>
-            <p className={style.paragraph}>{props.string["greeting"]("Test")}</p>
+            <p className={style.paragraph}>{props.str("greeting")("Test")}</p>
             <ul>
                 <Link activeClassName="active" href="/">Main</Link>
                 <Link activeClassName="active" href="/about">About</Link>

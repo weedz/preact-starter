@@ -9,7 +9,7 @@ function Main(props: Props) {
     return (
         <div>
             <h1>Main</h1>
-            <p>{props.string["greeting"]("Test")}</p>
+            <p>{props.str("greeting")("Test")}</p>
         </div>
     );
 }
