@@ -10,13 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@weedzcokie/i18n-preact": "^1.0.3",
+    "@weedzcokie/i18n-preact": "^1.1.0",
     "preact": "^10.5.5",
     "preact-router": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-react-jsx": "^7.12.5",
+    "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
