@@ -35,4 +35,4 @@ const App = (props: Props) => {
     );
 }
 
-export default Language(App);
+export default Language<{}>(App);

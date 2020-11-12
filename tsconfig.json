@@ -3,7 +3,6 @@
       "allowJs": true,
       "module": "ESNext",
       "skipLibCheck": true,
-      "esModuleInterop": true,
       "strict": true,
       "jsx": "react",
       "jsxFactory": "h",
