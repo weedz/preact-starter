@@ -3,10 +3,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
     entry: {
         app: path.resolve('src/index.tsx'),
     },
+    devtool: "source-map",
     output: {
         path: path.resolve('dist'),
         publicPath: '/',

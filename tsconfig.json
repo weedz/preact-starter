@@ -4,11 +4,10 @@
       "module": "ESNext",
       "skipLibCheck": true,
       "strict": true,
-      "jsx": "react",
-      "jsxFactory": "h",
+      "jsx": "react-jsx",
+      "jsxImportSource": "preact",
       "sourceMap": true,
       "baseUrl": ".",
-      "outDir": "dist",
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "paths": {
