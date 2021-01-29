@@ -24,7 +24,7 @@ const App = (props: Props) => {
                 <option value="sv">sv</option>
             </select>
             <p className={style.paragraph}>{props.str("greeting")("Test")}</p>
-            <p className={style.paragraph}>{props.str("test")({msg: "123"})}</p>
+            <p className={style.paragraph}>{props.str("test")({msg: "message"})}</p>
             <ul>
                 <Link activeClassName="active" href="/">Main</Link>
                 <Link activeClassName="active" href="/about">About</Link>
