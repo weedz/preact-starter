@@ -9,10 +9,7 @@
       "sourceMap": true,
       "baseUrl": ".",
       "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "paths": {
-        "*": ["node_modules/*"]
-      }
+      "resolveJsonModule": true
     },
     "include": [
       "src/**/*"
