@@ -1,6 +1,6 @@
-import { WrapLanguage } from "@weedzcokie/i18n-preact";
+import { Locales, WrapLanguage } from "@weedzcokie/i18n-preact";
 
-const locales = {
+const locales: Locales = {
     en: () => [import("./en")],
     sv: () => [import("./sv")]
 };

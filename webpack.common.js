@@ -21,22 +21,13 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
             },
             {
                 test: /\.tsx?$/,
-                exclude: /(node_modules|\.webpack)/,
-                use: [
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            transpileOnly: true
-                        }
-                    }
-                ]
+                use: 'ts-loader'
             },
             {
                 test: /\.css$/,
@@ -52,9 +43,7 @@ module.exports = {
             },
             {
                 test: /\.(svg|png)$/,
-                use: {
-                    loader: 'file-loader'
-                }
+                use: 'file-loader'
             }
         ]
     },
