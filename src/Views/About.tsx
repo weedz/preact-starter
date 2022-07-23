@@ -1,6 +1,5 @@
-import type { LanguageProps } from "@weedzcokie/i18n-preact";
+import { LanguageProps, withLanguage } from "@weedzcokie/i18n-preact";
 import { RoutableProps } from "preact-router";
-import withLanguage from "../i18n";
 
 type Props = RoutableProps & LanguageProps & {
     msg: string

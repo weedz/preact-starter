@@ -1,8 +1,7 @@
 import { Route, Router } from "preact-router";
 import { Link } from "preact-router/match";
-import { changeLanguage, LanguageProps } from "@weedzcokie/i18n-preact";
+import { changeLanguage, LanguageProps, withLanguage } from "@weedzcokie/i18n-preact";
 import style from "./style.module.css";
-import withLanguage from "./i18n";
 import Main from "./Views/Main";
 import About from "./Views/About";
 import Article from "./Views/Article";
