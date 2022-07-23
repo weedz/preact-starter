@@ -1,17 +1,22 @@
 {
     "compilerOptions": {
-      "allowJs": true,
-      "module": "ESNext",
-      "skipLibCheck": true,
-      "strict": true,
-      "jsx": "react-jsx",
-      "jsxImportSource": "preact",
-      "sourceMap": true,
-      "baseUrl": ".",
-      "moduleResolution": "node",
-      "resolveJsonModule": true
+        "allowJs": true,
+        "module": "ESNext",
+        "target": "ESNext",
+        "skipLibCheck": false,
+        "strict": true,
+        "noEmit": true,
+        "jsx": "preserve",
+        "jsxFactory": "h",
+        "jsxFragmentFactory": "Fragment",
+        "isolatedModules": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "resolveJsonModule": true
     },
     "include": [
-      "src/**/*"
+        "src",
+        "@types"
     ]
-  }
+}

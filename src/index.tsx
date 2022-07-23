@@ -1,8 +1,9 @@
-import {h, render} from 'preact';
+if (process.env.NODE_ENV === "development") {
+    // @ts-ignore
+    import("preact/debug");
+}
+import {render} from 'preact';
 import App from './App';
 
-if (process.env.NODE_ENV === "development") {
-    require("preact/debug");
-}
 
 render(<App />, document.body);

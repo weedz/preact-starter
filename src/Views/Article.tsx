@@ -1,6 +1,3 @@
-import {h} from "preact";
-import { RouteProps } from "preact-router";
-
 type Props = {
     id: number
 }

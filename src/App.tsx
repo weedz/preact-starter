@@ -1,16 +1,15 @@
-import { h } from "preact";
 import { Route, Router } from "preact-router";
 import { Link } from "preact-router/match";
 import { changeLanguage, LanguageProps } from "@weedzcokie/i18n-preact";
-import style from "./style.css";
-import Language, { StringValues } from "./i18n";
+import style from "./style.module.css";
+import withLanguage from "./i18n";
 import Main from "./Views/Main";
 import About from "./Views/About";
 import Article from "./Views/Article";
 
-type Props = LanguageProps<StringValues>;
+type Props = LanguageProps;
 
-function setLanguage(e: h.JSX.TargetedEvent<HTMLSelectElement, Event>) {
+function setLanguage(e: JSX.TargetedEvent<HTMLSelectElement, Event>) {
     const lang = e.currentTarget.value;
     changeLanguage(lang);
 }
@@ -23,8 +22,8 @@ const App = (props: Props) => {
                 <option value="en">en</option>
                 <option value="sv">sv</option>
             </select>
-            <p className={style.paragraph}>{props.str("greeting")("Test")}</p>
-            <p className={style.paragraph}>{props.str("test")({msg: "message"})}</p>
+            <p className={style.paragraph}>{props.t("greeting")("Test")}</p>
+            <p className={style.paragraph}>{props.t("test")({msg: "message"})}</p>
             <ul>
                 <Link activeClassName="active" href="/">Main</Link>
                 <Link activeClassName="active" href="/about">About</Link>
@@ -32,11 +31,11 @@ const App = (props: Props) => {
             </ul>
             <Router>
                 <Main path="/" default />
-                <About path="/about" />
+                <About path="/about" msg="Test props" />
                 <Route path="/article/:id" component={Article} />
             </Router>
         </div>
     );
 }
 
-export default Language<{}>(App);
+export default withLanguage(App);
