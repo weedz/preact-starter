@@ -1,11 +1,23 @@
-type Props = {
+import { LanguageProps, withLanguage } from "@weedzcokie/i18n-preact";
+import { Store, StoreComponent, updateStore } from "../Store";
+
+type Props = LanguageProps & {
     id: number
 }
 
-export default function Article(props: Props) {
-    return (
-        <div>
-            <h1>Article: {props.id}</h1>
-        </div>
-    );
+class Article extends StoreComponent<Props> {
+    componentDidMount() {
+        this.listen("counter");
+    }
+    render() {
+        return (
+            <div>
+                <h1>Article: {this.props.id}</h1>
+                <button onClick={() => updateStore({counter: Store.counter + 1})}>{this.props.t("increase_counter")}</button>
+                <p>{this.props.t("counter")(Store.counter)}</p>
+            </div>
+        );
+    }
 }
+
+export default withLanguage(Article);

@@ -4,6 +4,7 @@ specifiers:
   '@preact/preset-vite': ^2.3.0
   '@types/node': ^18.0.6
   '@weedzcokie/i18n-preact': 3.0.0-alpha.15
+  '@weedzcokie/store': ^1.0.4
   preact: ^10.10.0
   preact-router: ^4.1.0
   typescript: ^4.7.4
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@weedzcokie/i18n-preact': 3.0.0-alpha.15_preact@10.10.0
+  '@weedzcokie/store': 1.0.4_preact@10.10.0
   preact: 10.10.0
   preact-router: 4.1.0_preact@10.10.0
 
@@ -367,6 +369,14 @@ packages:
     resolution: {integrity: sha512-KMOc7hY4l1IoYwfQsV1zvJyVOv/Q+6aA/yMvF1q2RnosHi6aRaEJDY1UaID+U72UvK4saZCp13XYf5g8KbGBKA==}
     peerDependencies:
       preact: ^10.5.5
+    dependencies:
+      preact: 10.10.0
+    dev: false
+
+  /@weedzcokie/store/1.0.4_preact@10.10.0:
+    resolution: {integrity: sha512-KINQMwXkV5JLvkReej3U9p1RoRHxnpo/dOFrujxUivxuLQRYoCjamxYlFYbopgv6cfb5iXDCl4jNcyF+Hdx0vA==}
+    peerDependencies:
+      preact: ^10.5.14
     dependencies:
       preact: 10.10.0
     dev: false

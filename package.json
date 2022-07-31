@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@weedzcokie/i18n-preact": "3.0.0-alpha.15",
+    "@weedzcokie/store": "^1.0.4",
     "preact": "^10.10.0",
     "preact-router": "^4.1.0"
   },
