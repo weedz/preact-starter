@@ -23,11 +23,11 @@ const App = (props: Props) => {
             </select>
             <p className={style.paragraph}>{props.t("greeting")("Test")}</p>
             <p className={style.paragraph}>{props.t("test")({msg: "message"})}</p>
-            <ul>
+            <nav className={style.navigation}>
                 <Link activeClassName="active" href="/">Main</Link>
                 <Link activeClassName="active" href="/about">About</Link>
                 <Link activeClassName="active" href="/article/42">42</Link>
-            </ul>
+            </nav>
             <Router>
                 <Main path="/" default />
                 <About path="/about" msg="Test props" />

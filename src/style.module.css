@@ -4,10 +4,21 @@ body {
     padding: 0;
 }
 
+body {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .paragraph {
     color: red;
 }
 
 .active {
     color: lightcoral;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
