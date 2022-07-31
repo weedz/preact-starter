@@ -3,14 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   '@preact/preset-vite': ^2.3.0
   '@types/node': ^18.0.6
-  '@weedzcokie/i18n-preact': 3.0.0-alpha.7
+  '@weedzcokie/i18n-preact': 3.0.0-alpha.15
   preact: ^10.10.0
   preact-router: ^4.1.0
   typescript: ^4.7.4
   vite: ^3.0.2
 
 dependencies:
-  '@weedzcokie/i18n-preact': 3.0.0-alpha.7_preact@10.10.0
+  '@weedzcokie/i18n-preact': 3.0.0-alpha.15_preact@10.10.0
   preact: 10.10.0
   preact-router: 4.1.0_preact@10.10.0
 
@@ -363,8 +363,8 @@ packages:
     resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
     dev: true
 
-  /@weedzcokie/i18n-preact/3.0.0-alpha.7_preact@10.10.0:
-    resolution: {integrity: sha512-sPqb5PcaJApA04bPC8UO7x63XQbB5w2XwO4jrBf2406GpdOnQQJJeVm7KITfbHVzTNKJNK+8TTcud0SfuWCnKg==}
+  /@weedzcokie/i18n-preact/3.0.0-alpha.15_preact@10.10.0:
+    resolution: {integrity: sha512-KMOc7hY4l1IoYwfQsV1zvJyVOv/Q+6aA/yMvF1q2RnosHi6aRaEJDY1UaID+U72UvK4saZCp13XYf5g8KbGBKA==}
     peerDependencies:
       preact: ^10.5.5
     dependencies:

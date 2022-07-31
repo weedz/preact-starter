@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@weedzcokie/i18n-preact": "3.0.0-alpha.7",
+    "@weedzcokie/i18n-preact": "3.0.0-alpha.15",
     "preact": "^10.10.0",
     "preact-router": "^4.1.0"
   },
