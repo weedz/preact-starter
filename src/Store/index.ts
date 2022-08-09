@@ -1,5 +1,6 @@
 import { createStore, PartialStoreListener } from "@weedzcokie/store";
 import { Component } from "preact";
+import { useEffect, useState } from "preact/compat";
 type StoreType = {
     counter: number
 };
@@ -25,4 +26,19 @@ export abstract class StoreComponent<P = unknown, S = unknown> extends Component
             unsubscribe();
         }
     }
+}
+
+export function useStore<T extends StoreKeys>(keys: T[]) {
+    const [s, set] = useState(false);
+
+    useEffect(() => {
+        const update = () => set(!s);
+        const listeners = keys.map(key => store.subscribe(key, update));
+
+        return () => {
+            for (const unsubscribe of listeners) {
+                unsubscribe()
+            }
+        }
+    });
 }
