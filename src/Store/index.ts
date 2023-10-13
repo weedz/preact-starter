@@ -5,14 +5,12 @@ type StoreType = {
     counter: number
 };
 
-const store = createStore<StoreType>({
+export const store = createStore<StoreType>({
     counter: 0
 });
 type StoreKeys = keyof StoreType;
 
-// Optionally, export `Store` and `updateStore`:
 export const Store = store.Store;
-export const updateStore = store.updateStore;
 
 export abstract class StoreComponent<P = unknown, S = unknown> extends Component<P, S> {
     listeners: Array<() => void> = [];

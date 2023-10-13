@@ -22,7 +22,7 @@ const App = (props: Props) => {
                 <option value="sv">sv</option>
             </select>
             <p className={style.paragraph}>{props.t("greeting")("Test")}</p>
-            <p className={style.paragraph}>{props.t("test")({msg: "message"})}</p>
+            <div className={style.paragraph}>{props.t("test")({msg: "message"})}</div>
             <nav className={style.navigation}>
                 <Link activeClassName="active" href="/">Main</Link>
                 <Link activeClassName="active" href="/about">About</Link>
